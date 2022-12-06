@@ -4,11 +4,11 @@ kind: Deployment
 
 metadata:
 
-  name: deploy-database
+  name: deploy-httpd
 
   labels:
 
-    app: deploy-database
+    app: deploy-httpd
 
 spec:
 
@@ -18,7 +18,7 @@ spec:
 
     matchLabels:
 
-      app: deploy-database
+      app: deploy-httpd
 
   template:
 
@@ -26,15 +26,15 @@ spec:
 
       labels:
 
-        app: deploy-database
+        app: deploy-httpd
 
     spec:
 
       containers:
 
-      - name: mariadb
+      - name: httpd
 
-        image: mariadb:10.9
+        image: httpd:2.4.54
 
         ports:
 
