@@ -32,9 +32,9 @@ spec:
 
       containers:
 
-      - name: mysql
+      - name: mariadb
 
-        image: mysql:5.7
+        image: mariadb:10.9
 
         ports:
 
