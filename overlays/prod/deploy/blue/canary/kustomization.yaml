@@ -35,8 +35,5 @@ patchesJson6902:
     name: svc.*
   patch: |-
     - op: add
-      path: /metadata/labels/bluegreen
-      value: blue
-    - op: add
       path: /spec/selector/bluegreen
       value: blue
