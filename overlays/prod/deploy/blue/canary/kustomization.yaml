@@ -16,13 +16,13 @@ patchesJson6902:
       path: /metadata/labels/canary
       value: canary
     - op: add
-      path: /spec/selector/matchLabels/blugreen
+      path: /spec/selector/matchLabels/bluegreen
       value: blue
     - op: add
       path: /spec/selector/matchLabels/canarys
       value: canary
     - op: add
-      path: /spec/template/metadata/labels/blugreen
+      path: /spec/template/metadata/labels/bluegreen
       value: blue
     - op: add
       path: /spec/template/metadata/labels/canarys
@@ -37,5 +37,5 @@ patchesJson6902:
       path: /metadata/labels/bluegreen
       value: blue
     - op: add
-      path: /spec/selector/blugreen
+      path: /spec/selector/bluegreen
       value: blue
