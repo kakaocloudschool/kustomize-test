@@ -1,7 +1,8 @@
 resources:
   - ../../empty
 
-nameSuffix: -green-s
+transformers:
+- ./kustomizeconfig/apply-prefix.yaml
 
 patchesJson6902:
 - target:

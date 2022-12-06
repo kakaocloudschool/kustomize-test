@@ -1,0 +1,8 @@
+apiVersion: builtin
+kind: PrefixSuffixTransformer
+metadata:
+  name: customPrefixer
+suffix: "-blue-c"
+fieldSpecs:
+- kind: Deployment
+  path: metadata/name
