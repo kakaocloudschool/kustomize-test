@@ -1,0 +1,41 @@
+resources:
+  - ../../empty
+
+nameSuffix: -green-s
+
+patchesJson6902:
+- target:
+    version: v1
+    kind: Deployment
+    name: d.*
+  patch: |-
+    - op: add
+      path: /metadata/labels/bluegreen
+      value: green
+    - op: add
+      path: /metadata/labels/canary
+      value: stable
+    - op: add
+      path: /spec/selector/matchLabels/blugreen
+      value: green
+    - op: add
+      path: /spec/selector/matchLabels/canarys
+      value: stable
+    - op: add
+      path: /spec/template/metadata/labels/blugreen
+      value: green
+    - op: add
+      path: /spec/template/metadata/labels/canarys
+      value: stable      
+
+- target:
+    version: v1
+    kind: Service
+    name: svc.*
+  patch: |-
+    - op: add
+      path: /metadata/labels/bluegreen
+      value: green
+    - op: add
+      path: /spec/selector/blugreen
+      value: green

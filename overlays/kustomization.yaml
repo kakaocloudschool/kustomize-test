@@ -1,0 +1,5 @@
+resources:
+  - deploy/blue/canary
+  - deploy/blue/stable
+  - deploy/green/canary
+  - deploy/green/stable

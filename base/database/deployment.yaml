@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: deploy-database
+
+  labels:
+
+    app: deploy-database
+
+spec:
+
+  replicas: 3
+
+  selector:
+
+    matchLabels:
+
+      app: deploy-database
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: deploy-database
+
+    spec:
+
+      containers:
+
+      - name: mysql
+
+        image: mysql:8-debian
+
+        ports:
+
+        - containerPort: 80
