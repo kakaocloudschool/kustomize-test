@@ -1,4 +1,0 @@
-namePrefix:
-- path: metadata/name
-  apiVersion: v1
-  kind: Deployment

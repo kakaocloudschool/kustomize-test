@@ -1,6 +1,3 @@
 resources:
 - deployment.yaml
 - service.yaml
-
-configurations:
-- ./kustomizeconfig/apply-prefix.yaml

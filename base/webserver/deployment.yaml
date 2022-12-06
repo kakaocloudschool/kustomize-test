@@ -8,14 +8,14 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: webserver
+      app: deploy-webserver
   template:
     metadata:
       labels:
-        app: webserver
+        app: deploy-webserver
     spec:
       containers:
-      - name: webserver
+      - name: deploy-webserver
         image: nginx:1.19
         ports:
         - containerPort: 80
