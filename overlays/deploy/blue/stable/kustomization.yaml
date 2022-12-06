@@ -1,6 +1,6 @@
 resources:
   - ../../empty
-  - ../../../../base/database
+  - ../../../../base/httpd
   - ../../../../base/webserver
 
 nameSuffix: -blue-s
