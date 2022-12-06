@@ -1,10 +1,9 @@
 resources:
   - ../../empty
-  - ../../../../../base/webserver
+  - ../../../../../base/httpd
 
 transformers:
 - ./kustomizeconfig/apply-prefix.yaml
-
 
 patchesJson6902:
 - target:
@@ -12,22 +11,21 @@ patchesJson6902:
     kind: Deployment
     name: d.*
   patch: |-
-    # - nameSuffix: -blue-s
     - op: add
       path: /metadata/labels/bluegreen
-      value: blue
+      value: green
     - op: add
       path: /metadata/labels/canary
       value: stable
     - op: add
       path: /spec/selector/matchLabels/bluegreen
-      value: blue
+      value: green
     - op: add
       path: /spec/selector/matchLabels/canary
       value: stable
     - op: add
       path: /spec/template/metadata/labels/bluegreen
-      value: blue
+      value: green
     - op: add
       path: /spec/template/metadata/labels/canary
       value: stable      
@@ -39,7 +37,7 @@ patchesJson6902:
   patch: |-
     - op: add
       path: /metadata/labels/bluegreen
-      value: blue
+      value: green
     - op: add
       path: /spec/selector/bluegreen
-      value: blue
+      value: green
