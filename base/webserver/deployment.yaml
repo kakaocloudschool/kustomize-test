@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: deploy-webserver
   labels:
-    app: webserver
+    app: deploy-webserver
 spec:
   replicas: 3
   selector:
