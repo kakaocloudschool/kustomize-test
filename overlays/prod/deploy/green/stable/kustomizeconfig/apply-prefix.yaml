@@ -2,7 +2,7 @@ apiVersion: builtin
 kind: PrefixSuffixTransformer
 metadata:
   name: customPrefixer
-suffix: "-blue-s"
+suffix: "-green-s"
 fieldSpecs:
 - kind: Deployment
   path: metadata/name
