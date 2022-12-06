@@ -1,5 +1,6 @@
 resources:
   - ../../empty
+  - ../../../../../base/webserver
 
 transformers:
 - ./kustomizeconfig/apply-prefix.yaml
@@ -12,19 +13,19 @@ patchesJson6902:
   patch: |-
     - op: add
       path: /metadata/labels/bluegreen
-      value: blue
+      value: green
     - op: add
       path: /metadata/labels/canary
       value: canary
     - op: add
       path: /spec/selector/matchLabels/bluegreen
-      value: blue
+      value: green
     - op: add
       path: /spec/selector/matchLabels/canary
       value: canary
     - op: add
       path: /spec/template/metadata/labels/bluegreen
-      value: blue
+      value: green
     - op: add
       path: /spec/template/metadata/labels/canary
       value: canary      
@@ -36,4 +37,4 @@ patchesJson6902:
   patch: |-
     - op: add
       path: /spec/selector/bluegreen
-      value: blue
+      value: green
