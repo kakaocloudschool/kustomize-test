@@ -1,1 +1,43 @@
-test12234412421412
+resources:
+  - ../../empty
+  - ../../../../../base/httpd
+  - ../../../../../base/webserver
+
+nameSuffix: -blue-c
+
+patchesJson6902:
+- target:
+    version: v1
+    kind: Deployment
+    name: d.*
+  patch: |-
+    - op: add
+      path: /metadata/labels/bluegreen
+      value: blue
+    - op: add
+      path: /metadata/labels/canary
+      value: canary
+    - op: add
+      path: /spec/selector/matchLabels/blugreen
+      value: blue
+    - op: add
+      path: /spec/selector/matchLabels/canarys
+      value: canary
+    - op: add
+      path: /spec/template/metadata/labels/blugreen
+      value: blue
+    - op: add
+      path: /spec/template/metadata/labels/canarys
+      value: canary      
+
+- target:
+    version: v1
+    kind: Service
+    name: svc.*
+  patch: |-
+    - op: add
+      path: /metadata/labels/bluegreen
+      value: blue
+    - op: add
+      path: /spec/selector/blugreen
+      value: blue
