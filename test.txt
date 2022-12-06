@@ -1,8 +1,8 @@
 resources:
   - ../../empty
-  - ../../../../../base/webserver
+  - ../../../../../base/httpd
 
-nameSuffix: -blue-s
+nameSuffix: -blue-c
 
 patchesJson6902:
 - target:
@@ -15,19 +15,19 @@ patchesJson6902:
       value: blue
     - op: add
       path: /metadata/labels/canary
-      value: stable
+      value: canary
     - op: add
       path: /spec/selector/matchLabels/blugreen
       value: blue
     - op: add
       path: /spec/selector/matchLabels/canarys
-      value: stable
+      value: canary
     - op: add
       path: /spec/template/metadata/labels/blugreen
       value: blue
     - op: add
       path: /spec/template/metadata/labels/canarys
-      value: stable      
+      value: canary      
 
 - target:
     version: v1
