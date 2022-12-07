@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: deploy-webserver
-        image: nginx:1.19
+        image: nginx:1.15
         ports:
         - containerPort: 80
