@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deploy-canary
+  name: deploy-argorollout
   labels:
-    app: deploy-canary
+    app: deploy-argorollout
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: deploy-canary
+      app: deploy-argorollout
   template:
     metadata:
       labels:
-        app: deploy-canary
+        app: deploy-argorollout
     spec:
       containers:
-      - name: deploy-canary
+      - name: deploy-argorollout
         image: argoproj/rollouts-demo:blue
         ports:
         - name: http

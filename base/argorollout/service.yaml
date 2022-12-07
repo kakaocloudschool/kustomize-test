@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: svc-canary
+  name: svc-argorollout
   labels:
-    app: svc-canary  
+    app: svc-argorollout  
 spec:
   type: LoadBalancer
   ports:
-    - name: svc-canary
+    - name: svc-argorollout
       port: 80
       targetPort: 80
   selector:
-    app: deploy-canary
+    app: deploy-argorollout
