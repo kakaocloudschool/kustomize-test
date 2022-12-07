@@ -9,6 +9,7 @@ spec:
   ports:
     - name: svc-argorollout
       port: 80
-      targetPort: 80
+      targetPort: http
+      protocol: TCP      
   selector:
     app: deploy-argorollout
