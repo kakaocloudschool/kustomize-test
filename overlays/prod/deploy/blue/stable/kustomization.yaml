@@ -1,6 +1,5 @@
 resources:
   - ../../empty
-  - ../../../../../base/webserver
   - ../../../../../base/httpd
 
 transformers:
