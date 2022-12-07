@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-canary
+  labels:
+    app: deploy-canary
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: deploy-canary
+  template:
+    metadata:
+      labels:
+        app: deploy-canary
+    spec:
+      containers:
+      - name: deploy-canary
+        image: argoproj/rollouts-demo:blue
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+        resources:
+          requests:
+            memory: 32Mi
+            cpu: 5m

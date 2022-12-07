@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-canary
+  labels:
+    app: svc-canary  
+spec:
+  type: LoadBalancer
+  ports:
+    - name: svc-canary
+      port: 80
+      targetPort: 80
+  selector:
+    app: deploy-canary
