@@ -1,6 +1,5 @@
 resources:
   - ../../empty
-  - ../../../../../base/webserver
 
 transformers:
 - ./kustomizeconfig/apply-prefix.yaml
