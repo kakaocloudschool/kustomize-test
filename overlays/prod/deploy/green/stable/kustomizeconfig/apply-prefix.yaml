@@ -6,3 +6,5 @@ suffix: "-green-s"
 fieldSpecs:
 - kind: Deployment
   path: metadata/name
+- kind: Deployment
+  path: spec/template/spec/containers/name  
