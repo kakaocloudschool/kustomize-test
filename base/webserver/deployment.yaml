@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: deploy-webserver
-        image: nginx:1.15
+        image: ghcr.io/kakaocloudschool/devops-test-web:714daec0
         ports:
         - containerPort: 80
