@@ -3,8 +3,8 @@ kind: Kustomization
 images:
 - name: argoproj/rollouts-demo
   newTag: "green"
-- name: httpd
-  newTag: "2.4.54"
+- name: ghcr.io/kakaocloudschool/devops-test-web
+  newTag: "714daec0"
 - name: nginx
   newTag: "1.15"
 

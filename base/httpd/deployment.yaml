@@ -4,11 +4,11 @@ kind: Deployment
 
 metadata:
 
-  name: deploy-httpd
+  name: deploy-nginx
 
   labels:
 
-    app: deploy-httpd
+    app: deploy-nginx
 
 spec:
 
@@ -18,7 +18,7 @@ spec:
 
     matchLabels:
 
-      app: deploy-httpd
+      app: deploy-nginx
 
   template:
 
@@ -26,16 +26,15 @@ spec:
 
       labels:
 
-        app: deploy-httpd
+        app: deploy-nginx
 
     spec:
 
       containers:
 
-      - name: httpd
+      - name: deploy-nginx
 
-        image: httpd:2.4.54
+        image: nginx:1.15
 
         ports:
-
         - containerPort: 80
