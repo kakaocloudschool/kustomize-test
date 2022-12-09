@@ -4,7 +4,7 @@ images:
 - name: argoproj/rollouts-demo
   newTag: "blue"
 - name: ghcr.io/kakaocloudschool/devops-test-web
-  newTag: "0b187d07"
+  newTag: "714daec0"
 - name: nginx
   newTag: "1.15"
 
